@@ -1,0 +1,22 @@
+QUESTION
+
+Age must be at least 18.
+
+Monthly income must be 2000 and above.
+
+Credit score must be at least 600.
+
+If there is a previous debt, the application will be rejected.
+
+
+NOTES
+
+Immutable data model (final fields)
+
+Monetary data with BigDecimal
+
+Clear business result with LoanDecision enum
+
+Open to extension (for example, you can include rules in LoanEvaluator as a list, strategy pattern)
+
+MIN_* values are defined as constants.
