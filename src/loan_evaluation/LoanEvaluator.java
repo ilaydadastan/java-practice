@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 class LoanEvaluator {
     private static final int MIN_AGE = 18;
-    private static final BigDecimal MIN_INCOME = new BigDecimal("2000");
+    private static final BigDecimal MIN_INCOME = BigDecimal.valueOf(2000);
     private static final int MIN_CREDIT_SCORE = 600;
 
-    public LoanDecision evaluate(LoanApplication loanApplication) {
+    LoanDecision evaluate(LoanApplication loanApplication) {
         if (loanApplication.getAge() < MIN_AGE) {
             return LoanDecision.DENIED;
         }

@@ -2,12 +2,12 @@ package loan_evaluation;
 
 import java.math.BigDecimal;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         LoanApplication application = new LoanApplication(
                 "Ilayda",
                 30,
-                new BigDecimal("3000"),
+                BigDecimal.valueOf(3000),
                 false,
                 720
         );
