@@ -25,4 +25,24 @@ class LoanEvaluatorTest {
         // Then
         assertEquals(LoanDecision.APPROVED, decision);
     }
+
+    @Test
+    void shouldDenyLoanWhenIncomeIsSlow(){
+        // Given
+        LoanApplication application = new LoanApplication(
+                "Ilayda",
+                25,
+                new BigDecimal(1000),
+                false,
+                500
+        );
+        LoanEvaluator evaluator = new LoanEvaluator();
+
+        // When
+        LoanDecision decision = evaluator.evaluate(application);
+
+        // Then
+        assertEquals(LoanDecision.DENIED, decision);
+
+    }
 }
