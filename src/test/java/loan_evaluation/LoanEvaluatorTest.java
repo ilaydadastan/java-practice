@@ -23,7 +23,7 @@ class LoanEvaluatorTest {
         LoanDecision decision = evaluator.evaluate(application);
 
         // Then
-        assertEquals(LoanDecision.APPROVED, decision);
+        assertEquals(LoanDecision.APPROVED, decision); // expected, actual
     }
 
     @Test
@@ -42,7 +42,7 @@ class LoanEvaluatorTest {
         LoanDecision decision = evaluator.evaluate(application);
 
         // Then
-        assertEquals(LoanDecision.DENIED, decision);
+        assertEquals(LoanDecision.DENIED, decision); // expected, actual
 
     }
 }
